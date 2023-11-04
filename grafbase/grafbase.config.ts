@@ -19,7 +19,7 @@ const User = g.model('User', {
   avatarUrl: g.url(),
   linkedInUrl: g.url().optional(),
   githubUrl: g.url().optional(),
-  projects: g.relation(() => Project.list().optional()),
+  projects: g.relation(() => Project).list().optional(),
 })
 
 const Project = g.model('Project', {
