@@ -126,7 +126,6 @@ export const updateProject = async (
   token: string,
 ) => {
   let updatedForm = { ...form };
-  console.log(form.image);
 
   const isUploadingNewImage = isBase64DataURL(form.image);
 

@@ -21,8 +21,6 @@ const AuthProvidersComponent = () => {
     const fetchProviders = async (): Promise<void> => {
       const res = await getProviders();
 
-      console.log(res);
-
       setProviders(res);
     };
 
@@ -34,7 +32,7 @@ const AuthProvidersComponent = () => {
       <div>
         {Object.values(providers).map((provider: Provider) => (
           <button onClick={() => signIn(provider.id)} key={provider.id}>
-            {provider.id}
+            Sign in
           </button>
         ))}
       </div>
